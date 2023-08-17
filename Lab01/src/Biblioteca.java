@@ -14,7 +14,8 @@ public class Biblioteca {
 		this.setUsuarios(new ArrayList<>());
 		this.setLivrosEmprestados(new ArrayList<>());
 	}
-	
+
+
 	public List<Livro> getAcervoDeLivros() {
 		return acervoDeLivros;
 	}
@@ -43,8 +44,9 @@ public class Biblioteca {
 		return livrosEmprestados;
 	}
 
-	public void setLivrosEmprestados(List<Emprestimo> livrosemprestados) {
-		this.livrosEmprestados = livrosemprestados;
+	private void setLivrosEmprestados(ArrayList<Emprestimo> livrosEmprestados) {
+		this.livrosEmprestados = livrosEmprestados;
+		
 	}
 
 	public static void main(String args) {
