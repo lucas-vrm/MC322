@@ -2,6 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Biblioteca {
+	private List<ItemMultimidia> acervoDeItens;
 	private List<Livro> acervoDeLivros;
 	private List<Livro> livrosDisponiveis;
 	private List<Usuario> usuarios;
@@ -9,10 +10,19 @@ public class Biblioteca {
 
 	/*Metodo construtor*/
 	Biblioteca(){
+		this.setAcervoDeItens(new ArrayList<>());
 		this.setAcervoDeLivros(new ArrayList<>());
 		this.setLivrosDisponiveis(new ArrayList<>());
 		this.setUsuarios(new ArrayList<>());
 		this.setLivrosEmprestados(new ArrayList<>());
+	}
+	
+	public List<ItemMultimidia> getAcervoDeItens() {
+		return acervoDeItens;
+	}
+
+	public void setAcervoDeItens(List<ItemMultimidia> acervoDeItens) {
+		this.acervoDeItens = acervoDeItens;
 	}
 
 

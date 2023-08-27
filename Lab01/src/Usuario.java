@@ -1,11 +1,11 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Usuario {
+public class Usuario extends Membro{
 	private String nome;
 	private int id;
 	private String dataDeRegistro;
-	private List<String> livrosEmprestados;
+	private List<ItemMultimidia> itensEmprestados;
 
 	/*Metodo construtor*/
 	Usuario(String nome, int id, String dataDeRegistro){
@@ -40,12 +40,12 @@ public class Usuario {
 		this.dataDeRegistro = dataDeRegistro;
 	}
 
-	public List<String> getLivrosEmprestados() {
-		return livrosEmprestados;
+	public List<ItemMultimidia> getLivrosEmprestados() {
+		return itensEmprestados;
 	}
 
-	public void setLivrosEmprestados(List<String> livrosEmprestados) {
-		this.livrosEmprestados = livrosEmprestados;
+	public void setLivrosEmprestados(List<ItemMultimidia> itensEmprestados) {
+		this.itensEmprestados = itensEmprestados;
 	}
 
 	public static void main(String args) {

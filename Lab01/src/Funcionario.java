@@ -1,5 +1,5 @@
 
-public class Funcionario {
+public class Funcionario extends Membro {
 	private String nome;
 	private int id;
 	private String cargo;
