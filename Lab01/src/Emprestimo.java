@@ -1,25 +1,25 @@
 
 public class Emprestimo {
-	private Livro livro;
+	private ItemMultimidia item;
 	private Usuario usuario;
 	private String dataDeEmprestimo;
 	private String dataDevolucaoPrevista;
 	
 	/*Metodo construtor*/
-	public Emprestimo(Livro livro, Usuario usuario, String dataDeEmprestimo, String dataDevolucaoPrevista) {
-		this.setLivro(livro);
+	public Emprestimo(ItemMultimidia item, Usuario usuario, String dataDeEmprestimo, String dataDevolucaoPrevista) {
+		this.setItemMultimidia(item);
 		this.setUsuario(usuario);
 		this.setDataDeEmprestimo(dataDeEmprestimo);
 		this.setDataDevolucaoPrevista(dataDevolucaoPrevista);
 	}
 
 	/*Metodos getters e setters*/
-	public Livro getLivro() {
-		return livro;
+	public ItemMultimidia getItem() {
+		return item;
 	}
 
-	public void setLivro(Livro livro) {
-		this.livro = livro;
+	public void setItem(ItemMultimidia item) {
+		this.item = item;
 	}
 
 	public Usuario getUsuario() {
@@ -47,7 +47,8 @@ public class Emprestimo {
 	}
 
 	public static void main(String args) {
-		Emprestimo emprestimo1 = new Emprestimo(null, null, null, null);
-		System.out.println(emprestimo1);
+		Emprestimo emprestimo1 = new Emprestimo("Sherlock Holmes Vol. 1", "Regina", "10/08/2023", "10/09/2023");
+		System.out.println(emprestimo1.getUsuario() + "reservou o item" + emprestimo1.getItemMultimidia() + "na data"
+		+ emprestimo1.getDataDeEmprestimo() + "e devera fazer a devolucao ate" + getDataDevolucaoPrevista());
 	}
 }
