@@ -30,6 +30,6 @@ public class Membro {
 	}
 	public static void main(String[] args) {
 		Membro membro1 = new Membro("Mauricio", "Graduacao", 239090);
-		system.out.println(membro1)
+		System.out.println(membro1);
 	}
 }

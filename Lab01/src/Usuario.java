@@ -6,8 +6,8 @@ public class Usuario extends Membro{
 	private List<ItemMultimidia> itensEmprestados;
 
 	/*Metodo construtor*/
-	Usuario(String nome, int id, String dataDeRegistro){
-		super(nome, id)
+	Usuario(String nome, String tipoMembro, int id, String dataDeRegistro){
+		super(nome, tipoMembro, id);
 		this.setDataDeRegistro(dataDeRegistro);
 		this.setLivrosEmprestados(new ArrayList<>());
 	}
@@ -30,7 +30,7 @@ public class Usuario extends Membro{
 	}
 
 	public static void main(String args) {
-		Usuario pessoa = new Usuario("Fulano", 1, "01/01/2023");
+		Usuario pessoa = new Usuario("Fulano", "Usuario", 1, "01/01/2023");
 		System.out.println(pessoa);
 	}
 }

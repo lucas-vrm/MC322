@@ -35,4 +35,5 @@ public class Relatorio {
 	public static void main(String args) {
 		Relatorio relatorio1 = new Relatorio(21082023, "Roberto", 4);
 		System.out.println(relatorio1);
+	}
 }

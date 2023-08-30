@@ -14,11 +14,11 @@ public class Emprestimo {
 	}
 
 	/*Metodos getters e setters*/
-	public ItemMultimidia getItem() {
+	public ItemMultimidia getItemMultimidia() {
 		return item;
 	}
 
-	public void setItem(ItemMultimidia item) {
+	public void setItemMultimidia(ItemMultimidia item) {
 		this.item = item;
 	}
 
@@ -47,8 +47,12 @@ public class Emprestimo {
 	}
 
 	public static void main(String args) {
-		Emprestimo emprestimo1 = new Emprestimo("Sherlock Holmes Vol. 1", "Regina", "10/08/2023", "10/09/2023");
+		Emprestimo emprestimo1 = new Emprestimo(new ItemMultimidia("Sherlock Holmes Vol. 1", "001"),
+				new Usuario("Fulano", "Usuario", 1, "01/01/2023"),
+				"10/08/2023", 
+				"10/09/2023");
+		
 		System.out.println(emprestimo1.getUsuario() + "reservou o item" + emprestimo1.getItemMultimidia() + "na data"
-		+ emprestimo1.getDataDeEmprestimo() + "e devera fazer a devolucao ate" + getDataDevolucaoPrevista());
+		+ emprestimo1.getDataDeEmprestimo() + "e devera fazer a devolucao ate " + emprestimo1.getDataDevolucaoPrevista());
 	}
 }
