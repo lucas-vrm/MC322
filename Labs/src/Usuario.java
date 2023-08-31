@@ -2,8 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Usuario extends Membro{
-	private String dataDeRegistro;
-	private List<ItemMultimidia> itensEmprestados;
+	
 
 	/*Metodo construtor*/
 	Usuario(String nome, String tipoMembro, int id, String dataDeRegistro){

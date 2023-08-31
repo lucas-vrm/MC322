@@ -6,8 +6,8 @@ class CDAudio extends ItemMultimidia {
     private int numeroCopiasDisponiveis;
     private String estadoConservacao;
 
-    public CDAudio(String titulo, String codigo, String[] faixas, int duracaoTotal, int numeroTotalCopias, int numeroCopiasDisponiveis, String estadoConservacao) {
-    	super(titulo, codigo);
+    public CDAudio(String titulo, String autor, String codigo, String[] faixas, int duracaoTotal, int numeroTotalCopias, int numeroCopiasDisponiveis, String estadoConservacao) {
+    	super(titulo, autor, codigo);
         this.faixas = faixas;
         this.duracaoTotal = duracaoTotal;
         this.numeroTotalCopias = numeroTotalCopias;

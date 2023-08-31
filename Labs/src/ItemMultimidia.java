@@ -1,10 +1,12 @@
 class ItemMultimidia {
     private String titulo;
+    private String autor;
     private String codigo;
     private boolean disponibilidade;
 
-    public ItemMultimidia(String titulo, String codigo) {
+    public ItemMultimidia(String titulo, String autor, String codigo) {
         this.setTitulo(titulo);
+        this.setAutor(autor);
         this.setCodigo(codigo);
         this.disponibilidade = true;
     }
@@ -15,6 +17,14 @@ class ItemMultimidia {
 
 	public void setTitulo(String titulo) {
 		this.titulo = titulo;
+	}
+
+	public String getAutor() {
+		return autor;
+	}
+
+	public void setAutor(String autor) {
+		this.autor = autor;
 	}
 
 	public String getCodigo() {

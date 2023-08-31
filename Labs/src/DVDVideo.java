@@ -7,7 +7,7 @@ class DVDVideo extends ItemMultimidia {
     private String estadoConservacao;
 
     public DVDVideo(String titulo, String autor, String codigo, int duracaoTotal, int numeroTotalCopias, int numeroCopiasDisponiveis, String estadoConservacao) {
-        super(titulo, codigo);
+        super(titulo, autor, codigo);
         this.duracaoTotal = duracaoTotal;
         this.numeroTotalCopias = numeroTotalCopias;
         this.numeroCopiasDisponiveis = numeroCopiasDisponiveis;

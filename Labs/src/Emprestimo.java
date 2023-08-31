@@ -47,7 +47,7 @@ public class Emprestimo {
 	}
 
 	public static void main(String args) {
-		Emprestimo emprestimo1 = new Emprestimo(new ItemMultimidia("Sherlock Holmes Vol. 1", "001"),
+		Emprestimo emprestimo1 = new Emprestimo(new ItemMultimidia("Sherlock Holmes Vol. 1", "Artur Conan Doyle", "001"),
 				new Usuario("Fulano", "Usuario", 1, "01/01/2023"),
 				"10/08/2023", 
 				"10/09/2023");
