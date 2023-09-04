@@ -1,23 +1,24 @@
 public class Funcionario extends Membro {
-	private String cargo;
+	Cargo cargo;
+	
+	public enum Cargo {
+		ADMINISTRADOR,
+		ATENDENTE,
+		GERENTE
+	}
 
 	/*Metodo construtor*/
-	public Funcionario(String nome, String tipoMembro, int id, String cargo) {
-		super(nome, tipoMembro,id);
+	public Funcionario(String nome, String contato,  int id, 
+			String dataDeRegistro, Cargo cargo) {
+		super(nome, contato, id, dataDeRegistro);
 		this.cargo = cargo;
 	}
 
 	/*Metodos getters e setters*/
-	public String getCargo() {
-		return cargo;
-	}
-
-	public void setCargo(String cargo) {
-		this.cargo = cargo;
-	}
+	
 
 	public static void main(String args) {
-		Funcionario func1 = new Funcionario("Cicrano", "funcionario", 1, "caixa");
+		Funcionario func1 = new Funcionario("Cicrano", "(19) 912345678", 4, "02/01/2023", Cargo.ATENDENTE);
 		
 		System.out.println(func1);
 	}

@@ -1,15 +1,18 @@
+import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
+import Membro.TipoMembro;
 
 public class Emprestimo {
 	private ItemMultimidia item;
-	private Usuario usuario;
-	private String dataDeEmprestimo;
-	private String dataDevolucaoPrevista;
+	private Membro membro;
+	private LocalDate dataDeEmprestimo;
+	private LocalDate dataDevolucaoPrevista;
 	
 	/*Metodo construtor*/
-	public Emprestimo(ItemMultimidia item, Usuario usuario, String dataDeEmprestimo, String dataDevolucaoPrevista) {
+	public Emprestimo(ItemMultimidia item, Membro membro) {
 		this.setItemMultimidia(item);
-		this.setUsuario(usuario);
-		this.setDataDeEmprestimo(dataDeEmprestimo);
+		this.setMembro(membro);
+		LocalDate dataDeEmprestimo = LocalDate.now();
 		this.setDataDevolucaoPrevista(dataDevolucaoPrevista);
 	}
 
@@ -22,35 +25,33 @@ public class Emprestimo {
 		this.item = item;
 	}
 
-	public Usuario getUsuario() {
-		return usuario;
+	public Membro getUsuario() {
+		return membro;
 	}
 
-	public void setUsuario(Usuario usuario) {
-		this.usuario = usuario;
+	public void setMembro(Membro membro) {
+		this.membro = membro;
 	}
 
-	public String getDataDeEmprestimo() {
+	public LocalDate getDataDeEmprestimo() {
 		return dataDeEmprestimo;
 	}
 
-	public void setDataDeEmprestimo(String dataDeEmprestimo) {
+	public void setDataDeEmprestimo(LocalDate dataDeEmprestimo) {
 		this.dataDeEmprestimo = dataDeEmprestimo;
 	}
 
-	public String getDataDevolucaoPrevista() {
+	public LocalDate getDataDevolucaoPrevista() {
 		return dataDevolucaoPrevista;
 	}
 
-	public void setDataDevolucaoPrevista(String dataDevolucaoPrevista) {
+	public void setDataDevolucaoPrevista(LocalDate dataDevolucaoPrevista) {
 		this.dataDevolucaoPrevista = dataDevolucaoPrevista;
 	}
 
 	public static void main(String args) {
-		Emprestimo emprestimo1 = new Emprestimo(new ItemMultimidia("Sherlock Holmes Vol. 1", "Artur Conan Doyle", "001"),
-				new Usuario("Fulano", "Usuario", 1, "01/01/2023"),
-				"10/08/2023", 
-				"10/09/2023");
+		Emprestimo emprestimo1 = new Emprestimo(new ItemMultimidia("","",""),
+				new Membro("","",3, TipoMembro.GRADUACAO));
 		
 		System.out.println(emprestimo1.getUsuario() + "reservou o item" + emprestimo1.getItemMultimidia() + "na data"
 		+ emprestimo1.getDataDeEmprestimo() + "e devera fazer a devolucao ate " + emprestimo1.getDataDevolucaoPrevista());

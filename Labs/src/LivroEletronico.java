@@ -1,6 +1,6 @@
 class LivroEletronico extends ItemMultimidia {
     private Formato formato;
-    private int numTotalDeLicencas;
+    private int numeroTotalDeLicencas;
     private String URLDeAcesso;
     private String dataDeDisponibilidade;
     
@@ -12,10 +12,10 @@ class LivroEletronico extends ItemMultimidia {
     }
 
     public LivroEletronico(String titulo, String autor, String codigo, 
-    		int numTotalDeLicencas, String URLDeAcesso, String dataDeDisponibilidade,
+    		int numeroTotalDeLicencas, String URLDeAcesso, String dataDeDisponibilidade,
     		Formato formato) {
         super(titulo, autor, codigo);
-    	this.numTotalDeLicencas = numTotalDeLicencas;
+    	this.numeroTotalDeLicencas = numeroTotalDeLicencas;
     	this.URLDeAcesso = URLDeAcesso;
     	this.dataDeDisponibilidade = dataDeDisponibilidade;
         this.formato = formato;
@@ -29,12 +29,12 @@ class LivroEletronico extends ItemMultimidia {
 		this.formato = formato;
 	}
 
-	public int getNumTotalDeLicencas() {
-		return numTotalDeLicencas;
+	public int getNumeroTotalDeLicencas() {
+		return numeroTotalDeLicencas;
 	}
 
-	public void setNumTotalDeLicencas(int numTotalDeLicencas) {
-		this.numTotalDeLicencas = numTotalDeLicencas;
+	public void setNumeroTotalDeLicencas(int numeroTotalDeLicencas) {
+		this.numeroTotalDeLicencas = numeroTotalDeLicencas;
 	}
 
 	public String getURLDeAcesso() {

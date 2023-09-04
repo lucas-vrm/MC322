@@ -1,19 +1,19 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 
 public class Biblioteca {
 	private List<ItemMultimidia> acervoDeItens;
-	private List<Livro> acervoDeLivros;
-	private List<Livro> livrosDisponiveis;
-	private List<Usuario> usuarios;
+	private List<ItemMultimidia> itensDisponiveis;
+	private List<Membro> membros;
 	private List<Emprestimo> livrosEmprestados;
 
 	/*Metodo construtor*/
 	Biblioteca(){
 		this.setAcervoDeItens(new ArrayList<>());
-		this.setAcervoDeLivros(new ArrayList<>());
-		this.setLivrosDisponiveis(new ArrayList<>());
-		this.setUsuarios(new ArrayList<>());
+		this.setItensDisponiveis(new ArrayList<>());
+		this.setMembros(new ArrayList<>());
 		this.setLivrosEmprestados(new ArrayList<>());
 	}
 	
@@ -25,29 +25,20 @@ public class Biblioteca {
 		this.acervoDeItens = acervoDeItens;
 	}
 
-
-	public List<Livro> getAcervoDeLivros() {
-		return acervoDeLivros;
+	public List<ItemMultimidia> getLivrosDisponiveis() {
+		return itensDisponiveis;
 	}
 
-	public void setAcervoDeLivros(List<Livro> acervoDeLivros) {
-		this.acervoDeLivros = acervoDeLivros;
+	public void setItensDisponiveis(List<ItemMultimidia> itensDisponiveis) {
+		this.itensDisponiveis = itensDisponiveis;
 	}
 
-	public List<Livro> getLivrosDisponiveis() {
-		return livrosDisponiveis;
+	public List<Membro> getUsuarios() {
+		return membros;
 	}
 
-	public void setLivrosDisponiveis(List<Livro> livrosDisponiveis) {
-		this.livrosDisponiveis = livrosDisponiveis;
-	}
-
-	public List<Usuario> getUsuarios() {
-		return usuarios;
-	}
-
-	public void setUsuarios(List<Usuario> usuarios) {
-		this.usuarios = usuarios;
+	public void setMembros(List<Membro> membros) {
+		this.membros = membros;
 	}
 
 	public List<Emprestimo> getLivrosEmprestados() {

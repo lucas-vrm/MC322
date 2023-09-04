@@ -2,8 +2,8 @@
 class LivroFisico extends ItemMultimidia {
 	private String ISBN;
 	private String edicao;
-	private int numTotalDeCopias;
-	private int numTotalDeCopiasPorEdicao;
+	private int numeroTotalDeCopias;
+	private int numeroTotalDeCopiasPorEdicao;
 	private String LocalizacaoNaBiblioteca;
 	private EstadoConservacao estadoConservacao;
 	
@@ -16,14 +16,14 @@ class LivroFisico extends ItemMultimidia {
     
     //Metodo construtor
     public LivroFisico(String titulo, String autor, String codigo, 
-    		String ISBN, String edicao, int numTotalDeCopias, 
-    		int numTotalDeCopiasPorEdicao, String LocalizacaoNaBiblioteca, 
+    		String ISBN, String edicao, int numeroTotalDeCopias, 
+    		int numeroTotalDeCopiasPorEdicao, String LocalizacaoNaBiblioteca, 
     		EstadoConservacao estadoConservacao) {
         super(titulo, autor, codigo);
     	this.setISBN(ISBN);
     	this.setEdicao(edicao);
-    	this.setNumTotalDeCopias(numTotalDeCopias);
-    	this.setNumTotalDeCopiasPorEdicao(numTotalDeCopiasPorEdicao);
+    	this.setNumeroTotalDeCopias(numeroTotalDeCopias);
+    	this.setNumeroTotalDeCopiasPorEdicao(numeroTotalDeCopiasPorEdicao);
     	this.setLocalizacaoNaBiblioteca(LocalizacaoNaBiblioteca);
     	this.estadoConservacao = estadoConservacao;
     }
@@ -45,20 +45,20 @@ class LivroFisico extends ItemMultimidia {
 		this.edicao = edicao;
 	}
 
-	public int getNumTotalDeCopias() {
-		return numTotalDeCopias;
+	public int getNumeroTotalDeCopias() {
+		return numeroTotalDeCopias;
 	}
 
-	public void setNumTotalDeCopias(int numTotalDeCopias) {
-		this.numTotalDeCopias = numTotalDeCopias;
+	public void setNumeroTotalDeCopias(int numeroTotalDeCopias) {
+		this.numeroTotalDeCopias = numeroTotalDeCopias;
 	}
 
 	public int getNumTotalDeCopiasPorEdicao() {
-		return numTotalDeCopiasPorEdicao;
+		return numeroTotalDeCopiasPorEdicao;
 	}
 
-	public void setNumTotalDeCopiasPorEdicao(int numTotalDeCopiasPorEdicao) {
-		this.numTotalDeCopiasPorEdicao = numTotalDeCopiasPorEdicao;
+	public void setNumeroTotalDeCopiasPorEdicao(int numeroTotalDeCopiasPorEdicao) {
+		this.numeroTotalDeCopiasPorEdicao = numeroTotalDeCopiasPorEdicao;
 	}
 
 	public String getLocalizacaoNaBiblioteca() {
@@ -73,7 +73,7 @@ class LivroFisico extends ItemMultimidia {
         return estadoConservacao;
     }
 
-    // Método para atualizar o estado de conservação
+    // Metodo para atualizar o estado de conservacao
     public void atualizarEstadoConservacao(EstadoConservacao novoEstado) {
         estadoConservacao = novoEstado;
     }
