@@ -1,12 +1,14 @@
+package biblioteca;
 import java.time.LocalDate;
-import java.time.temporal.ChronoUnit;
+
 
 public class Membro {
 	private String nome;
 	private String contato;
 	private int id;
 	private LocalDate dataDeRegistro;
-	private TipoMembro tipoDeMembro;
+	private String endereco;
+	public TipoMembro tipoDeMembro;
 	
 	public enum TipoMembro {
         GRADUACAO,
@@ -16,11 +18,12 @@ public class Membro {
     }
 	
 	/*Metodo construtor*/
-	public Membro(String nome, String contato, int id, TipoMembro tipoDeMembro) {
+	public Membro(String nome, String contato, int id, String dataDeRegistro,
+			String endereco, TipoMembro tipoDeMembro) {
 		this.nome = nome;
 		this.contato = contato;
 		this.id = id;
-		LocalDate dataDeRegistro = LocalDate.now();
+		this.dataDeRegistro = LocalDate.parse(dataDeRegistro);
 		this.tipoDeMembro = tipoDeMembro;
 	}
 	
@@ -31,10 +34,10 @@ public class Membro {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
+	
 	public String getContato() {
 		return contato;
 	}
-
 	public void setContato(String contato) {
 		this.contato = contato;
 	}
@@ -45,10 +48,10 @@ public class Membro {
 	public void setId(int id) {
 		this.id = id;
 	}
+	
 	public LocalDate getDataDeRegistro() {
 		return dataDeRegistro;
 	}
-
 	public void setDataDeRegistro(LocalDate dataDeRegistro) {
 		this.dataDeRegistro = dataDeRegistro;
 	}
@@ -56,13 +59,20 @@ public class Membro {
 	public TipoMembro getTipoDeMembro() {
 		return tipoDeMembro;
 	}
-
 	public void setTipoDeMembro(TipoMembro tipoDeMembro) {
 		this.tipoDeMembro = tipoDeMembro;
 	}
+	
+	public String getEndereco() {
+		return endereco;
+	}
+	public void setEndereco(String endereco) {
+		this.endereco = endereco;
+	}
 
 	public static void main(String[] args) {
-		Membro membro1 = new Membro("Mauricio", "(19) 940028922", 239090, TipoMembro.GRADUACAO);
-		System.out.println(membro1);
+		
+		Membro membro1 = new Membro("Gabryel", "998579003", 238405, "2007-12-03", "Rua Jose Maravilha, 93", TipoMembro.GRADUACAO);
+		System.out.println(membro1.dataDeRegistro);
 	}
 }

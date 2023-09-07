@@ -1,7 +1,12 @@
+package biblioteca;
 import java.util.ArrayList;
 import java.util.List;
-import java.time.LocalDate;
-import java.time.temporal.ChronoUnit;
+
+import operacoesDaBiblioteca.Emprestimo;
+import itemMultimidia.ItemMultimidia;
+
+//import java.time.LocalDate;
+//import java.time.temporal.ChronoUnit;
 
 public class Biblioteca {
 	private List<ItemMultimidia> acervoDeItens;
@@ -50,7 +55,7 @@ public class Biblioteca {
 		
 	}
 
-	public static void main(String args) {
+	public static void main(String args[]) {
 		Biblioteca bae = new Biblioteca();
 		
 		System.out.println(bae);

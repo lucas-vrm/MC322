@@ -1,3 +1,4 @@
+package itemMultimidia;
 
 public class OutroRecursoMultimidia extends ItemMultimidia{
 	private String tipoDeRecurso;
@@ -7,23 +8,24 @@ public class OutroRecursoMultimidia extends ItemMultimidia{
 	private Formato formato;
 	private EstadoConservacao estadoConservacao;
 	
-	enum Formato {
+	private enum Formato {
 		FISICO,
 		DIGITAL
 	}
 	
-	public enum EstadoConservacao {
+	private enum EstadoConservacao {
         NOVO,
         VELHO_BOM_ESTADO,
         VELHO_MAU_ESTADO,
         DIGITAL
     }
 	
-	public OutroRecursoMultimidia(String titulo, String autor, String codigo, 
+	public OutroRecursoMultimidia(String titulo, String autor,
+    		String editora, int ano, String genero, String sinopse, 
     		String tipoDeRecurso, int numeroTotalDeCopias, 
     		int numeroDeCopiasDisponiveis, String LocalizacaoNaBiblioteca, 
     		Formato formato, EstadoConservacao estadoConservacao) {
-        super(titulo, autor, codigo);
+		super(titulo, autor, editora, ano, genero, sinopse);
     	this.setTipoDeRecurso(tipoDeRecurso);
     	this.setNumeroTotalDeCopias(numeroTotalDeCopias);
     	this.setNumeroDeCopiasDisponiveis(numeroDeCopiasDisponiveis);
@@ -34,7 +36,6 @@ public class OutroRecursoMultimidia extends ItemMultimidia{
 	public String getTipoDeRecurso() {
 		return tipoDeRecurso;
 	}
-
 	public void setTipoDeRecurso(String tipoDeRecurso) {
 		this.tipoDeRecurso = tipoDeRecurso;
 	}
@@ -42,7 +43,6 @@ public class OutroRecursoMultimidia extends ItemMultimidia{
 	public int getNumeroTotalCopias() {
 		return numeroTotalDeCopias;
 	}
-
 	public void setNumeroTotalDeCopias(int numeroTotalDeCopias) {
 		this.numeroTotalDeCopias = numeroTotalDeCopias;
 	}
@@ -50,7 +50,6 @@ public class OutroRecursoMultimidia extends ItemMultimidia{
 	public int getNumeroDeCopiasDisponiveis() {
 		return numeroDeCopiasDisponiveis;
 	}
-
 	public void setNumeroDeCopiasDisponiveis(int numeroDeCopiasDisponiveis) {
 		this.numeroDeCopiasDisponiveis = numeroDeCopiasDisponiveis;
 	}
@@ -58,7 +57,6 @@ public class OutroRecursoMultimidia extends ItemMultimidia{
 	public String getLocalizacaoNaBiblioteca() {
 		return LocalizacaoNaBiblioteca;
 	}
-
 	public void setLocalizacaoNaBiblioteca(String localizacaoNaBiblioteca) {
 		LocalizacaoNaBiblioteca = localizacaoNaBiblioteca;
 	}
@@ -66,7 +64,6 @@ public class OutroRecursoMultimidia extends ItemMultimidia{
 	public Formato getFormato() {
 		return formato;
 	}
-
 	public void setFormato(Formato formato) {
 		this.formato = formato;
 	}
@@ -74,9 +71,7 @@ public class OutroRecursoMultimidia extends ItemMultimidia{
 	public EstadoConservacao getEstadoConservacao() {
         return estadoConservacao;
     }
-
-    // Metodo para atualizar o estado de conservacao
-    public void atualizarEstadoConservacao(EstadoConservacao novoEstado) {
+    public void setEstadoConservacao(EstadoConservacao novoEstado) {
         estadoConservacao = novoEstado;
     }
 }
