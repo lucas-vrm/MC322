@@ -1,7 +1,6 @@
 package operacoesDaBiblioteca;
 
 import java.time.LocalDate;
-
 import biblioteca.Membro;
 import biblioteca.Membro.TipoMembro;
 import itemMultimidia.ItemMultimidia;
@@ -14,10 +13,10 @@ public class Renovacao {
 	// a nova data de devolucao eh calculada a partir do prazo de vencimento e a qntd de dias 
 	// eh de acordo com o tipo de membro. Ex.: membro graduacao tem o item q vence dia 10/02 -> nova data de devolucao = +15 dias = dia 25 
   	/*construtor*/
-	Renovacao(Membro solicitante, ItemMultimidia reserva, LocalDate dataDeEmprestimo){
+	Renovacao(Membro solicitante, ItemMultimidia reserva, String dataDeEmprestimo){
 		this.solicitante = solicitante;
 		this.reserva = reserva;
-		this.dataDeEmprestimo = dataDeEmprestimo;
+		this.dataDeEmprestimo = LocalDate.parse(dataDeEmprestimo);
 	}
 	
 	/*getters and setters*/
@@ -58,6 +57,5 @@ public class Renovacao {
 		else if (solicitante.tipoDeMembro == TipoMembro.FUNCIONARIO) {
 			this.novaDataDevolucao = dataDeEmprestimo.plusDays(40);
 		}
-	}
-	
+	}	
 }
