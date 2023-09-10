@@ -9,8 +9,8 @@ public class Funcionario extends Membro {
 
 	/*Metodo construtor*/
 	public Funcionario(String nome, String contato,  int id, 
-			String dataDeRegistro, Cargo cargo) {
-		super(nome, contato, id, dataDeRegistro);
+			TipoMembro tipoMembro, Cargo cargo) {
+		super(nome, contato, id, tipoMembro);
 		this.cargo = cargo;
 	}
 
@@ -18,7 +18,7 @@ public class Funcionario extends Membro {
 	
 
 	public static void main(String args) {
-		Funcionario func1 = new Funcionario("Cicrano", "(19) 912345678", 4, "02/01/2023", Cargo.ATENDENTE);
+		Funcionario func1 = new Funcionario("Cicrano", "(19) 912345678", 4, TipoMembro.FUNCIONARIO, Cargo.ATENDENTE);
 		
 		System.out.println(func1);
 	}

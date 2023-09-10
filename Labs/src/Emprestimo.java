@@ -1,6 +1,5 @@
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
-import Membro.TipoMembro;
 
 public class Emprestimo {
 	private ItemMultimidia item;
@@ -51,7 +50,7 @@ public class Emprestimo {
 
 	public static void main(String args) {
 		Emprestimo emprestimo1 = new Emprestimo(new ItemMultimidia("","",""),
-				new Membro("","",3, TipoMembro.GRADUACAO));
+				new Membro("","",3, Membro.TipoMembro.GRADUACAO));
 		
 		System.out.println(emprestimo1.getUsuario() + "reservou o item" + emprestimo1.getItemMultimidia() + "na data"
 		+ emprestimo1.getDataDeEmprestimo() + "e devera fazer a devolucao ate " + emprestimo1.getDataDevolucaoPrevista());
