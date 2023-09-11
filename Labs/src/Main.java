@@ -22,10 +22,11 @@ public class Main {
 		inicio();
 		
 		Scanner scanner = new Scanner(System.in);
-		System.out.println("Digite um número de 1 a 3:");
-        int escolha = scanner.nextInt();
+		int escolha;
 		
 		do {
+			System.out.println("Digite um número de 0 a 4:");
+	        escolha = scanner.nextInt();
 			switch(escolha) {
 				case 0:
 					System.out.println("Obrigado, ate mais!");
