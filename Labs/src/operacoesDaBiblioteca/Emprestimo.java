@@ -13,8 +13,7 @@ public class Emprestimo {
 	
 	
 	/*Metodo construtor*/
-	public Emprestimo(ItemMultimidia item, Membro membro,
-			String dataDeEmprestimo) {
+	public Emprestimo(ItemMultimidia item, Membro membro, String dataDeEmprestimo) {
 		this.setItemMultimidia(item);
 		this.setMembro(membro);
 		this.dataDeEmprestimo = LocalDate.parse(dataDeEmprestimo);
